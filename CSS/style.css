@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f1f1f1;
+}
+.flex,
+.flex_1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.flex_2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+h1{
+    text-align: center;
+    font-size: 2rem;
+    color: green;
+    margin-top: 100px;
+}
+#app{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    width: 70%;
+    border-radius: 10px;
+}
+form{
+    position: relative;
+    margin: 10px;
+}
+h2{
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.form-row{
+    height: 80px;
+    margin: 15px;
+}
+input{
+    font-size: 16px;
+}
+.form-row input[type ='text']{
+    width: 49%;
+}
+#far{
+    display: flex;
+    flex-direction: column;
+}
+#far input{
+    position: absolute;
+    width: 96.5%;
+}
+#far .far,
+#far .fas{
+    position: absolute;
+    color: #000;
+    font-size: 1.2rem;
+    right:  5%;
+    transform: translateY(30%);
+    cursor: pointer;
+}
+.form-row input{
+    line-height: 80px;
+    width: 100%;
+}
+.form-row button[type='button']{
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    background-color: green;
+    font-weight: bold;
+    font-size: 16px
+}
+#errorName,
+#errorEmail,
+#errorPassword,
+#errorConfPassword{
+    color: red;
+    height: 10px;
+    padding-left: 20px;
+}
+#errorLastName{
+    color: red;
+    height: 0px;
+    margin-left: 51.5%;
+    transform: translateY(-9px);
+}
+
+/********** Page connexion **********/
+.redirected a{
+text-decoration: none;
+color: green;
+}
