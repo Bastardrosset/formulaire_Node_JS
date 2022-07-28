@@ -1,4 +1,5 @@
-var form = document.getElementsByTagName('form')
+var form = document.forms['register']
+var formLogin = document.forms['login']
 var iconFaEye = document.querySelectorAll(".far");
 var firstName = document.forms[0]['firstName'];
 var lastName = document.forms[0]['lastName'];
@@ -97,7 +98,7 @@ let listenerFunction = {
             }else {
                 check = {...check, password: true}
             }
-            setSubmitButton()
+            setSubmitButton();
     },
     checkPasswordConfirme: (ev) => {
         let input = ev.target;
@@ -118,36 +119,57 @@ let listenerFunction = {
             }else {
                 check = {...check, confirmePassword: true}
             }
-            setSubmitButton()
+            setSubmitButton();
     }
 }
 
 let checkFormValid = () => {
+    var result = true;
+
     if(form){
-        var result = true;
         if(Object.keys(check).length === 5){
             for (const key in check){
                 const value = check[key];
                 result = result && value
                     if(!result) return result
             }
-            return result
+            return result;
         }
     }
-    return false
+    if(formLogin){
+        if(Object.keys(check).length === 2){
+            for (const key in check){
+                const value = check[key];
+                result = result && value
+                    if(!result) return result
+            }
+            return result;
+        }
+    }
+    return false;
 }
 
 let setSubmitButton = () => {
 
         if(form){
             if(checkFormValid()){
-                if(form[0].elements[5]){
-                    form[0].elements[5].disabled = false;
-                    return
+                if(form.elements[5]){
+                    form.elements[5].disabled = false
+                    return;
                 }   
             }
-            form[0].elements[5].disabled = true;
+            form.elements[5].disabled = true
         }
+        if(formLogin){
+            if(checkFormValid()){
+                if(formLogin.elements[2]){
+                    formLogin.elements[2].disabled = false
+                    return;
+                }   
+            }
+            formLogin.elements[2].disabled = true
+        }
+        
 }
 
 

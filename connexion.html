@@ -8,6 +8,30 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <h1>connexion</h1>
+        <section>
+            <div id="app">
+                <form action="#" method="post" id="login">
+                    <h2 class="titleConnexion">Connexion</h2>
+
+                    <div class="form-row flex_2 P2" id="far">
+                        <input class="flex input-page-connexion" type="email" name="email" placeholder="Email">
+                        <div class="error errorP2" id="errorEmail"></div>
+                    </div>
+                    <div class="form-row flex_2 P2" id="far">
+                        <input class="flex input-page-connexion" type="password" name="password" placeholder="Password">
+                        <i class="far fa-eye fa-eye-slash eyesP2"></i>
+                        <div class="error errorP2" id="errorPassword"></div>
+                    </div>
+                    <div class="form-row flex">
+                        <button type="button" class="submit flex_1" disabled="disabled">Se connecter</button>
+                    </div>
+                    <div class="form-row flex redirected">
+                        <p>Vous n'avez pas de compte ? Si oui <a href="index.html" target="_blank">cliquez ici</a> pour vous inscrire.</p>
+                    </div>
+                </form>
+            </div>
+        </section>
     </body>
+    <script src="JS/main.js"></script>
+    <script src="JS/function/formulaire.js"></script>
 </html>
